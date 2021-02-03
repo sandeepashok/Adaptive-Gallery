@@ -1,0 +1,90 @@
+    html {
+      box-sizing: border-box;
+      background: blue;
+      font-family: 'helvetica neue';
+      font-size: 20px;
+      font-weight: 200;
+    }
+    
+    body {
+      margin: 0;
+    }
+    
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    .panels {
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .panel {
+      background: #6B0F9C;
+      box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+      color: white;
+      text-align: center;
+      align-items: center;
+      transition:
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+      font-size: 20px;
+      background-size: cover;
+      background-position: center;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .panel1 { background-image:url(./img/gin_ichimaru___bleach__cacao_society__by_dingier_dd37wac-fullview.jpg); }
+    .panel2 { background-image:url(./img/rukia_kuchiki___bleach__new_year__by_dingier_dbys616-fullview\ \(2\).png); }
+    .panel3 { background-image:url(./img/ichigo_kurosaki___bleach_by_dingier_dc7h4t1-fullview.png); }
+    .panel4 { background-image:url(./img/kenpachi_zaraki___bleach_by_dingier_dbslc7p-fullview\ \(2\).png); }
+    .panel5 { background-image:url(./img/index5.png); }
+
+    /* Flex Children */
+    .panel > * {
+      margin: 0;
+      width: 100%;
+      transition: transform 0.5s;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .panel > *:first-child{
+        transform: translateY(-100%);
+    }
+
+    .panel.open-active> *:first-child{
+        transform: translateY(0);
+    }
+
+    .panel > *:last-child{
+        transform: translateY(100%);
+    }
+
+    .panel.open-active> *:last-child{
+        transform: translateY(0);
+    }
+
+    .panel p {
+      text-transform: uppercase;
+      font-family: 'Amatic SC', cursive;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+      font-size: 2em;
+    }
+    
+    .panel p:nth-child(2) {
+      font-size: 4em;
+    }
+
+    .panel.open {
+      flex: 5;
+      font-size: 40px;
+    }
