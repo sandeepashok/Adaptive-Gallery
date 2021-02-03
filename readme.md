@@ -4,7 +4,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://weathertoday-app.netlify.app/">
+    <a href="https://adaptive-gallery.netlify.app/">
       >> Demo <<
     </a>   
   </h3>
